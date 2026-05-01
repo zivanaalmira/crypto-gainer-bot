@@ -49,7 +49,7 @@ def scan_indodax():
         naik_dari_low = (harga / low - 1) * 100
         jarak_ke_high = (1 - harga / high) * 100
 
-        if naik_dari_low > 3.5 and jarak_ke_high < 1.5:
+        if naik_dari_low > 3.5 and jarak_ke_high < 5:
             coin = pair.replace('_idr','').upper()
             baris = f"{coin} | Price: Rp{harga:,.0f} | Naik: {naik_dari_low:.1f}%".replace('.', ',')
             sinyal_list.append(baris)
