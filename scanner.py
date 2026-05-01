@@ -4,8 +4,8 @@ import pandas as pd
 from datetime import datetime
 import os
 
-TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
-TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
+TELEGRAM_TOKEN = '8522416774:AAHyGo00L-9SRUJppT7_TELVJc-_v4uhirQ'
+TELEGRAM_CHAT_ID = '7664912842'
 
 def send_telegram(msg):
     if not TELEGRAM_TOKEN or not TELEGRAM_CHAT_ID:
