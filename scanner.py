@@ -87,12 +87,12 @@ def scan_indodax():
     # Gabungin semua sinyal jadi 1 pesan
     semua_pesan = []
     if sinyal_top_gainer:
-        semua_pesan.append("🚀 *SCAN TOP GAINER*")
+        semua_pesan.append("ZIVANA NEW ACTION | 🚀 *SCAN TOP GAINER*")
         semua_pesan.extend(sinyal_top_gainer)
 
     if sinyal_fast_mover:
         if semua_pesan: semua_pesan.append("") # Kasih spasi
-        semua_pesan.append("⚡ *FAST MOVER 5 MENIT*")
+        semua_pesan.append("ZIVANA NEW ACTION | ⚡ *FAST MOVER 5 MENIT*")
         semua_pesan.extend(sinyal_fast_mover)
 
     if semua_pesan:
