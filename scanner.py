@@ -10,7 +10,7 @@ TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
 # Settingan
 MIN_VOLUME_IDR = 1000000000 # Minimal volume 1 Miliar
 PAIR_WAJIB_SKIP = ['usdt_idr', 'usdc_idr']
-NAIK_PERSEN_ALERT = 3.0 # Alert kalau naik >3% per 5 menit
+NAIK_PERSEN_ALERT = 1.0 # Alert kalau naik >1% per 5 menit
 HARGA_FILE = "harga_sebelumnya.json" # File buat nyimpen harga terakhir
 
 def send_telegram(msg):
