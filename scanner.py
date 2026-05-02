@@ -10,7 +10,7 @@ TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
 # Settingan
 MIN_VOLUME_IDR = 1000000000 # Minimal volume 1 Miliar
 PAIR_WAJIB_SKIP = ['usdt_idr', 'usdc_idr']
-NAIK_PERSEN_ALERT = 1.0 # Alert kalau naik >1% per 5 menit
+NAIK_PERSEN_ALERT = 3.0 # Alert kalau naik >3% per 5 menit
 HARGA_FILE = "harga_sebelumnya.json" # File buat nyimpen harga terakhir
 
 def send_telegram(msg):
@@ -69,7 +69,7 @@ def scan_indodax():
         # --- MODE 1: SCAN TOP GAINER ---
         naik_dari_low = (harga / low - 1) * 100
         jarak_ke_high = (1 - harga / high) * 100
-        if naik_dari_low > 3.5 and jarak_ke_high < 5:
+        if naik_dari_low > 3.5 and jarak_ke_high < 3.5:
             baris = f"{coin} | Price: Rp{harga:,.0f} | Naik: {naik_dari_low:.1f}%".replace('.', ',')
             sinyal_top_gainer.append(baris)
 
